@@ -1,0 +1,451 @@
+  body{
+    background-color: rgb(255, 235, 238);
+    overflow:scroll;    
+}
+
+.container{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:1000px;
+    height:600px;
+    padding:50px;
+    background-color: #f5f5f5;
+    box-shadow: 0 30px 50px rgb(17, 17, 16);
+}
+#slide{
+    width:max-content;
+    margin-top:50px;
+}
+.item{
+    width:200px;
+    height:300px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+    box-shadow:  0 30px 50px #6a6969;
+}
+.item:nth-child(1),
+.item:nth-child(2){
+    left:0;
+    top:0;
+    transform: translate(0,0);
+    border-radius: 0;
+    width:100%;
+    height:100%;
+    box-shadow: none;
+}
+.item:nth-child(3){
+    left:50%;
+}
+.item:nth-child(4){
+    left:calc(50% + 220px);
+}
+.item:nth-child(5){
+    left:calc(50% + 440px);
+}
+.item:nth-child(n+6){
+    left:calc(50% + 660px);
+    opacity: 0;
+}
+.item .content{
+    position: absolute;
+    top:50%;
+    left:100px;
+    width:300px;
+    text-align: left;
+    padding:0;
+    color:#eee;
+    transform: translate(0,-50%);
+    display: none;
+    font-family: system-ui;
+}
+.item:nth-child(2) .content{
+    display: block;
+    z-index: 11111;
+}
+.item .name{
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 1 forwards
+}
+.item .des{
+    margin:20px 0;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.3s 1 forwards
+}
+.item button{
+    padding:10px 20px;
+    border:none;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.6s 1 forwards
+}
+@keyframes showcontent{
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px);
+    }to{
+        opacity: 1;
+        transform: translate(0,0);
+        filter:blur(0);
+    }
+}
+.buttons{
+    position: absolute;
+    bottom:30px;
+    z-index: 222222;
+    text-align: center;
+    width:100%;
+}
+.buttons button{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:1px solid #555;
+    transition: 0.5s;
+}.buttons button:hover{
+    background-color: #bac383;
+}
+.des{
+    color: rgb(10, 1, 1);
+    text-decoration: underline rgb(242, 238, 238);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:2px 2px 5px white;
+    text-wrap:balance;
+    font-size: 20px;
+}
+.name{
+    color: rgb(7, 1, 1);
+    text-transform:capitalize;
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 5px rgb(240, 241, 238);
+}
+.company{
+    font-family: fantasy;
+    text-transform: uppercase;
+    font-size: 50px;
+    position: relative;
+    top: 720px;
+    left: 100px;
+    text-decoration: underline red;
+}
+.com1{
+position: absolute;
+top: 820px;
+left: 50px;
+
+}
+
+.c1{
+    height: 80px;
+    position: absolute;
+    top: -10px;
+
+}
+.jain2{
+    height: 500px;
+    width: 350px;
+    border-radius: 0px 35px 35px 0px px;
+    filter: drop-shadow(10px 10px 25px rgb(8, 9, 4));
+}
+.jainpng{
+position: absolute;
+height: 100px;
+width: 200px;
+margin-left: 20px;
+margin-top: 260px;
+}
+.jaindes{
+position: absolute;
+text-transform:none;
+text-wrap:balance;
+font-size: 25px;
+margin-left: 60px;
+color: red;
+height: 50px;
+width: 200px;
+}
+.jainsir{
+    position: absolute;
+    height: 200px;
+    width: auto;
+    margin-left: 40px;
+    margin-top: 0px;
+    filter: drop-shadow(5px 5px 10px gold);
+}
+.jainsirname{
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 210px;
+    font-size: 15px;
+    text-decoration:none;
+
+    color: white;
+    word-spacing: 1px;
+}
+.jainsirnames{
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 230px;
+    font-size: 15px;
+    color: white;
+    text-decoration:underline;
+
+
+}
+/* contact logos */
+.calll{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin-left: 50px;
+    margin-bottom: 800px;
+    position: absolute;
+    margin-top: 370px;
+}
+.calll:hover{
+    color: blue;
+}
+.email{
+    color: black;
+    font-size:10px;
+    margin-left: 40px;
+    position: absolute;
+    margin-top: 395px;
+}
+.email:hover{
+    color: blue;
+}
+
+.jainadd{
+    position: absolute;
+    font-size: 15px;
+    margin-top: 420px;
+    margin-left: 30px ;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    overflow: hidden;
+    
+}
+.jainadd:hover{
+    color: blue;
+}
+.btn1{
+    cursor:pointer;
+}
+.meharcontainer{
+    height: 500px;
+    width:600px ;
+    top: 50%;
+    margin-top: 350px;
+    margin-left: -80px;
+    background-color: #795548 ;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 0% 100% 0% 100% / 0% 0% 100% 100% ;
+    box-shadow: 1px 25px 25px rgb(11,1,11);
+}
+.meharcontainer:hover{
+    transition: 0.9s;
+    border-radius:0% 100% 0% 100% / 100% 0% 100% 0%  ;
+}
+.meharcontainer1{
+    height: 500px;
+    width:600px ;
+    top: 50%;
+    overflow: hidden;
+    margin-top: 350px;
+    margin-left: 600px;
+    background-color: #795548;
+    position: absolute;
+    border-radius: 0% 100% 99% 1% / 100% 0% 100% 0%    ;
+    box-shadow: 2px 25px 25px rgb(11, 1, 11);
+}
+.meharcontainer1:hover{
+    transition: 0.9s;
+    border-radius:0% 100% 0% 100% / 100% 0% 100% 0% ;
+   
+}
+/*tree*/
+.treee{
+    height: 50px;
+    width: auto;
+    margin-left: 300px;
+    margin-top:-100px;
+    
+}
+.treee:hover{
+    filter: drop-shadow(5px 5px 10px rgb(16, 243, 16));
+    
+}
+/*meher irrigation*/
+.mehermam{
+    position: absolute;
+    height: 200px;
+    width: auto;
+    margin-left: 10px;
+    margin-top: 0px;
+    filter: drop-shadow(5px 5px 10px gold);
+    
+}
+.meher1{
+    height: 500px;
+    width: 350px;
+    border-radius: 0px 35px 35px 0px px;
+    filter: drop-shadow(5px 15px 25px rgb(8, 1, 1));
+    margin-left:250px;
+
+}
+.mehadd{
+    position: absolute;
+    font-size: 15px;
+    margin-top: 420px;
+    margin-left: 10px ;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    overflow: hidden;
+    
+}
+.mehadd:hover{
+    color: blue;
+}
+.mehemail{
+    color: black;
+    font-size:10px;
+    margin-left: 40px;
+    position: absolute;
+    margin-top: 395px;
+}
+.email:hover{
+    color: blue;
+}
+ .lable{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 900px;
+    position: absolute;
+    color:black;
+    text-decoration:underline red;
+    
+ }
+ .callingincon{
+    height:70px;
+    width: 70px;
+    position: absolute;
+    color: black;
+    margin-top: 885px;
+    margin-left: 250px;
+    filter: drop-shadow(5px 5px 10px blue);
+ }
+ .callingincon:hover{
+    transition: 0.1s linear ease-in-out;
+    transform: rotate(55deg);
+    filter: blur(1px);
+    filter: drop-shadow(5px 5px 25px green);
+
+ }
+ .blackbox{
+    height: 300px;
+    width: 100vw;
+    background-color: rgb(20, 19, 19);
+    position:absolute;  
+    top: 100%;
+    margin-top:1000px;
+    margin-left: -100px;
+ }
+ .c2{
+margin-left: 290px;
+position: absolute;
+color: white;
+text-shadow: 5px 2px 6px rgb(11, 8, 8);
+cursor:no-drop;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 20px;
+   
+    
+}
+ .btn3{
+    height: 50px;
+    width: 180px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 10px;
+ }
+ .btn3:hover{
+    cursor:pointer;
+    transition: 0.5s;
+    transform: scale(0.8);
+    filter: drop-shadow(5px 5px 10px white);
+ }
+ .btn4{
+    height: 50px;
+    width:180px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 220px;
+    margin-left: 20px;
+    padding: 5px;
+    position: absolute;
+ }
+ .btn4:hover{
+    cursor:pointer;
+    transition: 0.5s;
+    transform: scale(0.8);
+    filter: drop-shadow(5px 5px 10px white);
+ }
+.instalogo{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    margin-left: 200px;
+    margin-top:50px;
+}
+.instalogo:hover{
+    filter: drop-shadow(5px 5px 10px white);
+}
+.youlogo{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 50px;
+}
+.youlogo:hover{
+    filter:drop-shadow(5px 5px 10px white);
+}
+.linkdinlogo{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    margin-left: 1135px;
+    margin-top: 95px;
+}
+.linkdinlogo:hover{
+    filter: drop-shadow(5px 6px 10px white);
+}
+.spotlogo{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 50px;
+}
+.spotlogo:hover{
+    filter:drop-shadow(5px 5px 10px white);
+}
+
+
+ 
